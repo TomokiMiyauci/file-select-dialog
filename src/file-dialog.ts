@@ -13,7 +13,7 @@ export interface Parameters<T extends boolean = false> {
 type PickFile<T extends boolean = false> = T extends true ? FileList : File
 
 /**
- * Call file dialog programmatically.
+ * Call file select dialog programmatically.
  * @param {object} [parameters] optional
  * @returns {Promise} Promise <File | FileList> if multiple is true, return FileList object, if false return File object
  */
