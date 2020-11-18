@@ -1,6 +1,6 @@
 {
   "name": "file-select-dialog",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Call file select dialog programmatically",
   "main": "dist/index.js",
   "author": "TomokiMiyauci <development.operation.6.6.6@gmail.com>",
