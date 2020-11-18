@@ -1,12 +1,12 @@
 import { UnknownError, NotReceiveFileList } from './error'
-
+import { joinArrayString } from './util'
 const DEFAULT_PARAMETERS: Parameters = {
   accept: '*',
   multiple: false
 }
 
 export interface Parameters<T extends boolean = false> {
-  accept: string
+  accept: string | string[]
   multiple: T
 }
 
@@ -25,7 +25,7 @@ export const fileDialog = <T extends boolean = false>(
     const input = document.createElement('input')
     input.type = 'file'
     input.multiple = multiple
-    input.accept = accept
+    input.accept = Array.isArray(accept) ? joinArrayString(accept) : accept
 
     const onChange = (): void => {
       resolver()
