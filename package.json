@@ -11,7 +11,8 @@
     "build": "tsc",
     "lint": "eslint --ext .ts --ignore-path .gitignore .",
     "test": "jest",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
@@ -56,5 +57,8 @@
       "@semantic-release/github",
       "@semantic-release/git"
     ]
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
