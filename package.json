@@ -7,6 +7,16 @@
   "repository": "https://github.com/TomokiMiyauci/file-select-dialog",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "file",
+    "dialog",
+    "file-dialog",
+    "file-select-dialog",
+    "file-selection-dialog",
+    "browser",
+    "file-browser",
+    "filelist"
+  ],
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext .ts --ignore-path .gitignore .",
