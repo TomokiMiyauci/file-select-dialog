@@ -32,6 +32,9 @@ jobs:
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: yarn --check-files --frozen-lockfile --non-interactive
 
+      - name: Test unit
+        run: yarn test:unit --ci
+
       - name: release
         run: yarn semantic-release
         env:

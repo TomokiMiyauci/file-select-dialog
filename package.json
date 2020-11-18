@@ -20,7 +20,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext .ts --ignore-path .gitignore .",
-    "test": "jest",
+    "test:unit": "jest",
     "semantic-release": "semantic-release",
     "prepublishOnly": "yarn build"
   },
