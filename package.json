@@ -4,7 +4,7 @@
   "description": "Call file select dialog programmatically",
   "main": "dist/index.js",
   "author": "TomokiMiyauci <development.operation.6.6.6@gmail.com>",
-  "repository": "https://github.com/TomokiMiyauci/file-dialog",
+  "repository": "https://github.com/TomokiMiyauci/file-select-dialog",
   "license": "MIT",
   "private": false,
   "scripts": {
