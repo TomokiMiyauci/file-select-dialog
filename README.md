@@ -47,3 +47,7 @@ const onClick = async () => {
   const fileList = await fileDialog({ multiple: true }) // return FileList object. Your editor suggest FileList object types.
 }
 ```
+
+## LICENSE
+
+MIT
