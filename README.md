@@ -12,7 +12,7 @@ No more hacky hiding of `<input type="file">` elements.
 - Supports ES6 Modules
 - Pure Typescript
 - Promise
-- No dependencies, Super slim (561 bytes)
+- No dependencies, Optimization, Super slim size
 - Modern browser support only
 - Supports selecting multiple files and the file type accepts
 
