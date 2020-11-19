@@ -1,4 +1,3 @@
-// import { RollupOptions } from 'rollup'
 import pkg from './package.json'
 import typescript from 'rollup-plugin-typescript2'
 import sourceMaps from 'rollup-plugin-sourcemaps'
