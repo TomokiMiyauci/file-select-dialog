@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.0.0...v1.1.0) (2020-11-18)
+
+
+### Features
+
+* **file-dialog.ts:** accept string and string array ([5ae6df3](https://github.com/TomokiMiyauci/file-select-dialog/commit/5ae6df34d502b35597bc407ac5f7ee704385e931))
+* **util.ts:** add parser for array to string ([551df7f](https://github.com/TomokiMiyauci/file-select-dialog/commit/551df7f7eb6034dafbe2286608d4548ce903d666))
+
 # 1.0.0 (2020-11-18)
 
 
