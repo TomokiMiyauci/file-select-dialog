@@ -20,13 +20,13 @@ type PickFile<T extends boolean = false> = T extends true ? FileList : File
 export const fileDialog = <T extends boolean = false>(
   parameters?: Partial<Parameters<T>>
 ): Promise<PickFile<T>> => {
-  return new Promise<PickFile<T>>((resolve, reject) => {
-    const { accept, multiple } = { ...DEFAULT_PARAMETERS, ...parameters }
-    const input = document.createElement('input')
-    input.type = 'file'
-    input.multiple = multiple
-    input.accept = Array.isArray(accept) ? joinArrayString(accept) : accept
+  const { accept, multiple } = { ...DEFAULT_PARAMETERS, ...parameters }
+  const input = document.createElement('input')
+  input.type = 'file'
+  input.multiple = multiple
+  input.accept = Array.isArray(accept) ? joinArrayString(accept) : accept
 
+  return new Promise<PickFile<T>>((resolve, reject) => {
     const onChange = (): void => {
       resolver()
       input.remove()
