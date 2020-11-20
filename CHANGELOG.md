@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.1.0...v1.1.1) (2020-11-19)
+
+
+### Performance Improvements
+
+* **rollup.config.ts:** apply minify ([64c0442](https://github.com/TomokiMiyauci/file-select-dialog/commit/64c04427740e99fd73174453214257b407aa726c))
+
 # [1.1.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.0.0...v1.1.0) (2020-11-18)
 
 
