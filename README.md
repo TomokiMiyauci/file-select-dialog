@@ -2,6 +2,9 @@
 
 [![npm version](https://img.shields.io/npm/v/file-select-dialog.svg?style=flat)](https://www.npmjs.com/package/file-select-dialog)
 [![size](https://img.shields.io/bundlephobia/min/file-select-dialog)](https://img.shields.io/bundlephobia/min/file-select-dialog)
+[![codecov](https://codecov.io/gh/TomokiMiyauci/file-select-dialog/branch/main/graph/badge.svg?token=KY5KS2WE4I)](https://codecov.io/gh/TomokiMiyauci/file-select-dialog)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat)](https://github.com/prettier/prettier)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 Directly call file select dialog to JavaScript.
 Get Back Promise File or FileList object.
@@ -27,7 +30,7 @@ npm i file-select-dialog
 import like this.
 
 ```ts
-import { fileDialog } from 'file-select-dialog'
+import fileDialog from 'file-select-dialog'
 ```
 
 ## Examples
