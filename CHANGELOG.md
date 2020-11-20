@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.1.1...v1.2.0) (2020-11-20)
+
+
+### Features
+
+* **index.ts:** change to default export ([337f54a](https://github.com/TomokiMiyauci/file-select-dialog/commit/337f54ad2e71cee9153b8697697bec82992cb0cf))
+
 ## [1.1.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.1.0...v1.1.1) (2020-11-19)
 
 
