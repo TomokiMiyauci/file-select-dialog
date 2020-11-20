@@ -30,7 +30,7 @@ npm i file-select-dialog
 import like this.
 
 ```ts
-import fileDialog from 'file-select-dialog'
+import { fileDialog } from 'file-select-dialog'
 ```
 
 ## Examples
