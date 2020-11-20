@@ -1,1 +1,3 @@
-export { fileDialog } from './file-dialog'
+import { fileDialog } from './file-dialog'
+
+export default fileDialog
