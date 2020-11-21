@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.2.0...v1.2.1) (2020-11-20)
+
+
+### Bug Fixes
+
+* **index.ts:** change to named export ([233504e](https://github.com/TomokiMiyauci/file-select-dialog/commit/233504ea8602b650ce1bda909cc50bc96b570177))
+
 # [1.2.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.1.1...v1.2.0) (2020-11-20)
 
 
