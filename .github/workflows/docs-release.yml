@@ -4,8 +4,14 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
+
+    paths:
       - 'example/**'
+
+defaults:
+  run:
+    shell: bash
+    working-directory: example
 
 jobs:
   setup:
@@ -29,13 +35,13 @@ jobs:
         uses: actions/cache@v2
         with:
           path: node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-docs-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
       - name: Install
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: yarn --check-files --frozen-lockfile --non-interactive
 
-  lint:
+  lint-markup:
     needs: setup
     runs-on: ${{ matrix.os }}
 
@@ -57,12 +63,12 @@ jobs:
         uses: actions/cache@v2
         with:
           path: node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-docs-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
-      - name: Lint
-        run: yarn lint
+      - name: Lint by VTI
+        run: yarn lint:markup
 
-  test-unit:
+  lint-script:
     needs: setup
     runs-on: ${{ matrix.os }}
 
@@ -84,19 +90,74 @@ jobs:
         uses: actions/cache@v2
         with:
           path: node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-docs-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
-      - name: Test unit
-        run: yarn test:unit --ci --coverage
+      - name: Lint by ESLint
+        run: yarn lint:script
+
+  lint-style:
+    needs: setup
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Restore node_modules
+        id: node_modules_cache_id
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-docs-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
+      - name: Lint by Stylelint
+        run: yarn lint:style
+
+  build:
+    needs: setup
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Restore node_modules
+        id: node_modules_cache_id
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-docs-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+
+      - name: Build
+        run: yarn build
 
       - uses: actions/upload-artifact@v2
         with:
-          name: coverage
-          path: coverage
+          name: dist
+          path: example/dist
 
-  codecov:
-    needs: test-unit
+  release:
+    needs: [lint-markup, lint-script, lint-style, build]
     runs-on: ${{ matrix.os }}
+
     strategy:
       matrix:
         os: [ubuntu-latest]
@@ -107,39 +168,11 @@ jobs:
 
       - uses: actions/download-artifact@v2
         with:
-          name: coverage
-          path: coverage
+          name: dist
+          path: example/dist
 
-      - uses: codecov/codecov-action@v1
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          file: coverage/clover.xml
-          fail_ci_if_error: true
-
-  release:
-    needs: [lint, test-unit]
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-    steps:
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: ${{ matrix.node }}
-
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Restore node_modules
-        id: node_modules_cache_id
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
-
-      - name: release
-        run: yarn semantic-release
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
