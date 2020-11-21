@@ -9,7 +9,7 @@
         <div class="absolute inset-0 bg-black bg-opacity-75"></div>
         <div class="relative w-full flex flex-col">
           <div class="flex-none h-11 flex items-center px-4">
-            <div class="flex space-x-1.5">
+            <div class="flex">
               <div class="w-3 h-3 border-2 rounded-full border-red-500"></div>
               <div class="w-3 h-3 border-2 rounded-full border-amber-400"></div>
               <div class="w-3 h-3 border-2 rounded-full border-green-400"></div>
