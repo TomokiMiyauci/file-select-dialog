@@ -20,7 +20,7 @@
   ],
   "scripts": {
     "build": "rollup -c rollup.config.ts",
-    "lint": "eslint --ext .ts --ignore-path .gitignore .",
+    "lint": "eslint --ext .ts --ignore-path .gitignore src tests",
     "test:unit": "jest",
     "semantic-release": "semantic-release",
     "prepublishOnly": "yarn build"
