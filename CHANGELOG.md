@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.2.1...v1.3.0) (2020-11-21)
+
+
+### Features
+
+* **file-dialog.ts:** split functions ([36a6619](https://github.com/TomokiMiyauci/file-select-dialog/commit/36a661998a39f21da1397c164da7cd96da2d5ce2))
+
 ## [1.2.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.2.0...v1.2.1) (2020-11-20)
 
 
