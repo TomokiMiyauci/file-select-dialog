@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.3.0...v1.3.1) (2020-11-21)
+
+
+### Bug Fixes
+
+* **package.json:** fix entrypoint ([df1f6d1](https://github.com/TomokiMiyauci/file-select-dialog/commit/df1f6d1e057e1d0f6baddbb3f8d52dfd525b00af))
+
 # [1.3.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.2.1...v1.3.0) (2020-11-21)
 
 
