@@ -1,9 +1,5 @@
 <template>
-  <h1
-    class="p-2 text-3xl bg-clip-text text-transparent bg-gradient-to-r from-gray-400 to-blue-500"
-  >
-    file-select-dialog
-  </h1>
+  <h1 class="p-2 text-3xl text-gray-700">file-select-dialog</h1>
   <div class="container mx-auto mt-32">
     <h2 class="text-3xl text-gray-700">Example</h2>
 
@@ -15,25 +11,18 @@
       >
     </h3>
   </div>
+  <app-footer class="fixed bottom-0 w-full" />
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import { fileDialog } from 'file-select-dialog'
   import FilePreview from '/@/components/FilePreview.vue'
+  import AppFooter from './components/app/AppFooter.vue'
 
   export default defineComponent({
     components: {
       FilePreview,
-    },
-
-    setup() {
-      const onClick = async () => {
-        const file = await fileDialog({ multiple: false, accept: '.png,.pdf' })
-        console.log(file)
-      }
-
-      return { onClick }
+      AppFooter,
     },
   })
 </script>

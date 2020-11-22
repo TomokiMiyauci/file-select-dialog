@@ -9,7 +9,7 @@
         <div class="absolute inset-0 bg-black bg-opacity-75"></div>
         <div class="relative w-full flex flex-col">
           <div class="flex-none h-11 flex items-center px-4">
-            <div class="flex">
+            <div class="flex space-x-1.5">
               <div class="w-3 h-3 border-2 rounded-full border-red-500"></div>
               <div class="w-3 h-3 border-2 rounded-full border-amber-400"></div>
               <div class="w-3 h-3 border-2 rounded-full border-green-400"></div>
@@ -51,8 +51,10 @@
 <code class="px-3 text-white">
 <pre>&lt;template></pre><pre>  &lt;button @click="onClick">Normal Button&lt;/button></pre><pre>&lt;/template></pre>
 <pre>&lt;script></pre><pre>  import { defineComponent } from 'vue'</pre><pre>  import { fileDialog } from 'file-select-dialog'</pre>
-<pre>  export default defineComponent({</pre><pre>    setup() {</pre><pre>    const onClick = async () => {</pre><pre>      const file = await fileDialog() // { multiple: true } => FileList </pre><pre>    })</pre>
+<pre>  export default defineComponent({</pre><pre>    setup() {</pre><pre>    const onClick = async () => {</pre><pre>      const file = await fileDialog(<pre v-show="override" >        {
+<pre-code v-show="multipleRef" :value="multipleRef" /><pre-code v-show="acceptRef" :value="acceptRef" />        }</pre><span v-show="override">      </span>)</pre>
 <pre>    return { onClick }</pre><pre>  })</pre><pre>&lt;/script></pre>
+
 </code>
 </pre>
               </div>
@@ -65,6 +67,31 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
-  export default defineComponent({})
+  import { defineComponent, inject, computed } from 'vue'
+  import counter, { CounterStore } from '../components/useForm'
+  import PreCode from '/@/components/PreCode.vue'
+  export default defineComponent({
+    components: {
+      PreCode,
+    },
+
+    setup() {
+      const { accept, multiple } = inject(counter) as CounterStore
+
+      const acceptRef = computed(() => {
+        if (!accept.value || accept.value === '*') return
+        return `accept: ${accept.value}`
+      })
+
+      const multipleRef = computed(() => {
+        if (!multiple.value) return
+        return `multiple: ${multiple.value},`
+      })
+
+      const override = computed(() => {
+        return (accept.value !== '*' && accept.value) || multiple.value
+      })
+      return { acceptRef, multipleRef, override }
+    },
+  })
 </script>
