@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.3.1...v1.4.0) (2020-11-22)
+
+
+### Features
+
+* add form composition function ([96ac5cb](https://github.com/TomokiMiyauci/file-select-dialog/commit/96ac5cb63c091844055c358f47db132cf5d3c7b0))
+* **components/*:** add new component ([8db2c6f](https://github.com/TomokiMiyauci/file-select-dialog/commit/8db2c6fa242a917332cc0fd6a0ba98540faa443a))
+
 ## [1.3.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.3.0...v1.3.1) (2020-11-21)
 
 
