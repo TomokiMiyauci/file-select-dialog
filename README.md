@@ -38,6 +38,10 @@ import { fileDialog } from 'file-select-dialog'
 
 ## Examples
 
+[Demo](https://file-select-dialog.vercel.app/)
+
+![screenshot](https://res.cloudinary.com/dz3vsv9pg/image/upload/c_scale,f_auto,q_auto,w_1217/v1606026970/screenshot.png)
+
 Get a File object by default.
 
 ```ts
@@ -56,4 +60,4 @@ const onClick = async () => {
 
 ## LICENSE
 
-MIT
+[MIT](https://github.com/TomokiMiyauci/file-select-dialog/blob/main/LICENSE)
