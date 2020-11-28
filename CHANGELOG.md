@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.4.0...v1.4.1) (2020-11-28)
+
+
+### Performance Improvements
+
+* **rollup.config.ts:** change output format ([de7de62](https://github.com/TomokiMiyauci/file-select-dialog/commit/de7de62b4ae4664ef547cbd0e87a1429c24a6f84))
+
 # [1.4.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.3.1...v1.4.0) (2020-11-22)
 
 
