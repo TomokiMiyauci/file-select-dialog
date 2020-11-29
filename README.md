@@ -13,7 +13,7 @@ Directly call file select dialog to JavaScript.
 Get Back Promise File or FileList object.
 No more hacky hiding of `<input type="file">` elements.
 
-## Feature
+## :sparkles: Feature
 
 - Supports ES6 Modules
 - Pure Typescript
@@ -22,7 +22,7 @@ No more hacky hiding of `<input type="file">` elements.
 - Modern browser support only
 - Supports selecting multiple files and the file type accepts
 
-## Install
+## :truck: Install
 
 ```bash
 yarn add file-select-dialog
@@ -36,7 +36,11 @@ import like this.
 import { fileDialog } from 'file-select-dialog'
 ```
 
-## Examples
+## :page_facing_up: Docs
+
+Reference is [here](https://tomokimiyauci.github.io/file-select-dialog/modules/file_dialog.html#filedialog).
+
+## :mag: Examples
 
 [Demo](https://file-select-dialog.vercel.app/)
 
@@ -58,6 +62,6 @@ const onClick = async () => {
 }
 ```
 
-## LICENSE
+## :bulb: LICENSE
 
 [MIT](https://github.com/TomokiMiyauci/file-select-dialog/blob/main/LICENSE)
