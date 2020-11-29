@@ -1,16 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  <script type="module" src="/_assets/index.71329a83.js"></script>
-<link rel="stylesheet" href="/_assets/style.7ae96bb1.css">
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>file-select-dialog</title>
+	<meta name="description" content="Documentation for file-select-dialog">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
 </head>
-
-  <body>
-    <div id="app"></div>
-    
-  </body>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">file-select-dialog</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>file-select-dialog</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#file-select-dialog" id="file-select-dialog" style="color: inherit; text-decoration: none;">
+					<h1>file-select-dialog</h1>
+				</a>
+				<p><a href="https://www.npmjs.com/package/file-select-dialog"><img src="https://img.shields.io/npm/v/file-select-dialog.svg?style=flat" alt="npm version"></a>
+					<a href="https://img.shields.io/bundlephobia/min/file-select-dialog"><img src="https://img.shields.io/bundlephobia/min/file-select-dialog" alt="size"></a>
+					<a href="https://img.shields.io/npm/dw/file-select-dialog?color=blue"><img src="https://img.shields.io/npm/dw/file-select-dialog?color=blue" alt="size"></a>
+					<a href="https://codecov.io/gh/TomokiMiyauci/file-select-dialog"><img src="https://codecov.io/gh/TomokiMiyauci/file-select-dialog/branch/main/graph/badge.svg?token=KY5KS2WE4I" alt="codecov"></a>
+					<a href="https://github.com/prettier/prettier"><img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" alt="code style: prettier"></a>
+					<a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"></a>
+					<a href="https://github.com/semantic-release/semantic-release"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release"></a>
+				<a href="https://github.com/TomokiMiyauci/blog/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/file-select-dialog?color=blue&registry_uri=https%3A%2F%2Fregistry.npmjs.com" alt="MIT License"></a></p>
+				<p>Directly call file select dialog to JavaScript.
+					Get Back Promise File or FileList object.
+				No more hacky hiding of <code>&lt;input type=&quot;file&quot;&gt;</code> elements.</p>
+				<a href="#feature" id="feature" style="color: inherit; text-decoration: none;">
+					<h2>Feature</h2>
+				</a>
+				<ul>
+					<li>Supports ES6 Modules</li>
+					<li>Pure Typescript</li>
+					<li>Promise</li>
+					<li>No dependencies, Optimization, Super slim size</li>
+					<li>Modern browser support only</li>
+					<li>Supports selecting multiple files and the file type accepts</li>
+				</ul>
+				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+					<h2>Install</h2>
+				</a>
+				<pre><code class="language-bash">yarn add file-select-dialog
+or
+npm i file-select-dialog</code></pre>
+				<p>import like this.</p>
+				<pre><code class="language-ts"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">fileDialog</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;file-select-dialog&#039;</span>
+</code></pre>
+				<a href="#examples" id="examples" style="color: inherit; text-decoration: none;">
+					<h2>Examples</h2>
+				</a>
+				<p><a href="https://file-select-dialog.vercel.app/">Demo</a></p>
+				<p><img src="https://res.cloudinary.com/dz3vsv9pg/image/upload/c_scale,f_auto,q_auto,w_1217/v1606026970/screenshot.png" alt="screenshot"></p>
+				<p>Get a File object by default.</p>
+				<pre><code class="language-ts"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">onClick</span><span style="color: #000000"> = </span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">file</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">fileDialog</span><span style="color: #000000">() </span><span style="color: #008000">// open file select dialog and waiting user selection then return File object. Your editor suggest File object types.</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<p>Get a FileList object when parameters of <code>multiple</code> is true.</p>
+				<pre><code class="language-ts"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #795E26">onClick</span><span style="color: #000000"> = </span><span style="color: #0000FF">async</span><span style="color: #000000"> () </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">fileList</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #795E26">fileDialog</span><span style="color: #000000">({ </span><span style="color: #001080">multiple:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000"> }) </span><span style="color: #008000">// return FileList object. Your editor suggest FileList object types.</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>LICENSE</h2>
+				</a>
+				<p><a href="https://github.com/TomokiMiyauci/file-select-dialog/blob/main/LICENSE">MIT</a></p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/error.html">error</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/file_dialog.html">file-<wbr>dialog</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/index.html">index</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/util.html">util</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
 </html>
