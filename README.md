@@ -98,5 +98,3 @@ const onClick = async () => {
 ## :bulb: LICENSE
 
 [MIT](https://github.com/TomokiMiyauci/file-select-dialog/blob/main/LICENSE)
-
-
