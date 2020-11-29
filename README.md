@@ -40,28 +40,63 @@ import { fileDialog } from 'file-select-dialog'
 
 Reference is [here](https://tomokimiyauci.github.io/file-select-dialog/modules/file_dialog.html#filedialog).
 
+### :pencil2: Argument
+
+Parameters `Object`
+
+| key      | type                   | default |
+| -------- | ---------------------- | ------- |
+| accept   | (string \| stirng[] )? | '\*'    |
+| multiple | boolean?               | `false` |
+| strict   | boolean?               | `false` |
+
 ## :mag: Examples
 
 [Demo](https://file-select-dialog.vercel.app/)
 
 ![screenshot](https://res.cloudinary.com/dz3vsv9pg/image/upload/c_scale,f_auto,q_auto,w_1217/v1606026970/screenshot.png)
 
-Get a File object by default.
+By default can only select a single file and get a FileList object.
 
 ```ts
 const onClick = async () => {
-  const file = await fileDialog() // open file select dialog and waiting user selection then return File object. Your editor suggest File object types.
+  // open file select dialog and waiting user selection then return FileList object.
+  const fileList = await fileDialog()
 }
 ```
 
-Get a FileList object when parameters of `multiple` is true.
+If the `multiple` parameter is `true`, can select multiple files and get a FileList object.
 
 ```ts
 const onClick = async () => {
-  const fileList = await fileDialog({ multiple: true }) // return FileList object. Your editor suggest FileList object types.
+  const fileList = await fileDialog({ multiple: true })
+}
+```
+
+The `accept` parameter limit the selecable file types.
+
+```ts
+const onClick = async () => {
+  const fileList = await fileDialog({ accept: '.png' })
+
+  // multiple acceptable types
+  const fileList = await fileDialog({ accept: ['.jpg', '.pdf'] })
+}
+```
+
+### :zap: Advanced
+
+If the parameter of `multiple` is `false` and `strict` is `true`, can get File object directly.
+Your editor suggest File object types.
+
+```ts
+const onClick = async () => {
+  const file = await fileDialog({ strict: true })
 }
 ```
 
 ## :bulb: LICENSE
 
 [MIT](https://github.com/TomokiMiyauci/file-select-dialog/blob/main/LICENSE)
+
+
