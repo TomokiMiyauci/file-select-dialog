@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.4.1...v1.5.0) (2020-11-29)
+
+
+### Features
+
+* **file-dialog:** add strict parameter and change default return types ([b9754e2](https://github.com/TomokiMiyauci/file-select-dialog/commit/b9754e28ec14686a223856cb04500a2bc8aa651e))
+
 ## [1.4.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.4.0...v1.4.1) (2020-11-28)
 
 
