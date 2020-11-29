@@ -165,8 +165,8 @@ jobs:
         id: node_modules_cache_id
         uses: actions/cache@v2
         with:
-          path: example/node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-docs-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          path: node_modules
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
       - name: Build docs
         run: yarn typedoc --out docs src
