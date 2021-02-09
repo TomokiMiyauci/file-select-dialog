@@ -36,7 +36,7 @@ jobs:
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: yarn --check-files --frozen-lockfile --non-interactive
 
-build-docs:
+  build-docs:
     needs: [setup]
     runs-on: ${{ matrix.os }}
 
