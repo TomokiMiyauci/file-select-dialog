@@ -4,6 +4,7 @@
 
 const title = 'File Select Dialog'
 const description = 'Directly call file select dialog from JavaScript'
+const baseUrl = 'https://tomokimiyauci.github.io/file-select-dialog/'
 module.exports = {
   lang: 'en-US',
   title,
@@ -12,12 +13,12 @@ module.exports = {
   head: [
     ['meta', { name: 'og:title', content: title }],
     ['meta', { name: 'og:description', content: description }],
-    ['meta', { name: 'og:image', content: '/logo.png' }],
+    ['meta', { name: 'og:image', content: `${baseUrl}logo.png'` }],
     [
       'meta',
       {
         name: 'og:url',
-        content: 'https://tomokimiyauci.github.io/file-select-dialog/'
+        content: baseUrl
       }
     ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
