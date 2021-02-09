@@ -4,7 +4,7 @@
 
 const title = 'File Select Dialog'
 const description = 'Directly call file select dialog from JavaScript'
-const baseUrl = 'https://file-select-dialog.vercel.app/'
+const baseUrl = 'https://file-select-dialog.vercel.app'
 module.exports = {
   lang: 'en-US',
   title,
@@ -12,7 +12,7 @@ module.exports = {
   head: [
     ['meta', { name: 'og:title', content: title }],
     ['meta', { name: 'og:description', content: description }],
-    ['meta', { name: 'og:image', content: `${baseUrl}logo.png` }],
+    ['meta', { name: 'og:image', content: `${baseUrl}/logo.png` }],
     [
       'meta',
       {
@@ -29,7 +29,7 @@ module.exports = {
     ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@miyauchi_tomoki' }],
-    ['link', { rel: 'icon', content: `${baseUrl}favicon.ico` }]
+    ['link', { rel: 'icon', content: `${baseUrl}/favicon.ico` }]
   ],
 
   themeConfig: {
