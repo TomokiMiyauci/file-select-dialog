@@ -8,6 +8,7 @@ module.exports = {
   lang: 'en-US',
   title,
   description,
+  base: '/file-select-dialog/',
   head: [
     ['meta', { name: 'og:title', content: title }],
     ['meta', { name: 'og:description', content: description }],
