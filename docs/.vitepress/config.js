@@ -10,20 +10,20 @@ module.exports = {
   title,
   description,
   head: [
-    ['meta', { name: 'og:title', content: title }],
-    ['meta', { name: 'og:description', content: description }],
-    ['meta', { name: 'og:image', content: `${baseUrl}/logo.png` }],
+    ['meta', { property: 'og:title', content: title }],
+    ['meta', { property: 'og:description', content: description }],
+    ['meta', { property: 'og:image', content: `${baseUrl}/logo.png` }],
     [
       'meta',
       {
-        name: 'og:url',
+        property: 'og:url',
         content: baseUrl
       }
     ],
     [
       'meta',
       {
-        name: 'og:type',
+        property: 'og:type',
         content: 'website'
       }
     ],
