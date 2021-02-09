@@ -1,4 +1,4 @@
-name: release
+name: docs-release
 
 on:
   push:
@@ -6,12 +6,7 @@ on:
       - main
 
     paths:
-      - 'example/**'
-
-defaults:
-  run:
-    shell: bash
-    working-directory: example
+      - 'docs/**'
 
 jobs:
   setup:
@@ -41,8 +36,8 @@ jobs:
         if: steps.node_modules_cache_id.outputs.cache-hit != 'true'
         run: yarn --check-files --frozen-lockfile --non-interactive
 
-  lint-markup:
-    needs: setup
+build-docs:
+    needs: [setup]
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -62,62 +57,36 @@ jobs:
         id: node_modules_cache_id
         uses: actions/cache@v2
         with:
-          path: example/node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-docs-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          path: node_modules
+          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
-      - name: Lint by VTI
-        run: yarn lint:markup
+      - name: Build docs
+        run: yarn docs:build
 
-  lint-script:
-    needs: setup
+      - uses: actions/upload-artifact@v2
+        with:
+          name: docs
+          path: docs/.vitepress/dist
+
+  release-docs:
+    needs: build-docs
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [14]
 
     steps:
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: ${{ matrix.node }}
-
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Restore node_modules
-        id: node_modules_cache_id
-        uses: actions/cache@v2
+      - uses: actions/download-artifact@v2
         with:
-          path: example/node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-docs-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          name: docs
+          path: docs/.vitepress/dist
 
-      - name: Lint by ESLint
-        run: yarn lint:script
-
-  lint-style:
-    needs: setup
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
-    steps:
-      - uses: actions/setup-node@v2-beta
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Restore node_modules
-        id: node_modules_cache_id
-        uses: actions/cache@v2
-        with:
-          path: example/node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-docs-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
-
-      - name: Lint by Stylelint
-        run: yarn lint:style
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist

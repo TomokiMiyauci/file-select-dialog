@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - 'example/**'
+      - 'docs/**'
 
 jobs:
   setup:
@@ -144,57 +145,57 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-  build-docs:
-    needs: [setup]
-    runs-on: ${{ matrix.os }}
+  # build-docs:
+  #   needs: [setup]
+  #   runs-on: ${{ matrix.os }}
 
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest]
+  #       node: [14]
 
-    steps:
-      - uses: actions/setup-node@v2-beta
-        with:
-          node-version: ${{ matrix.node }}
+  #   steps:
+  #     - uses: actions/setup-node@v2-beta
+  #       with:
+  #         node-version: ${{ matrix.node }}
 
-      - name: Checkout
-        uses: actions/checkout@v2
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
 
-      - name: Restore node_modules
-        id: node_modules_cache_id
-        uses: actions/cache@v2
-        with:
-          path: node_modules
-          key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+  #     - name: Restore node_modules
+  #       id: node_modules_cache_id
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: node_modules
+  #         key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
-      - name: Build docs
-        run: yarn typedoc --out docs src
+  #     - name: Build docs
+  #       run: yarn typedoc --out docs src
 
-      - uses: actions/upload-artifact@v2
-        with:
-          name: docs
-          path: docs
+  #     - uses: actions/upload-artifact@v2
+  #       with:
+  #         name: docs
+  #         path: docs
 
-  release-docs:
-    needs: [release, build-docs]
-    runs-on: ${{ matrix.os }}
+  # release-docs:
+  #   needs: [release, build-docs]
+  #   runs-on: ${{ matrix.os }}
 
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest]
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
 
-      - uses: actions/download-artifact@v2
-        with:
-          name: docs
-          path: docs
+  #     - uses: actions/download-artifact@v2
+  #       with:
+  #         name: docs
+  #         path: docs
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs
+  #     - name: Deploy
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_dir: docs
