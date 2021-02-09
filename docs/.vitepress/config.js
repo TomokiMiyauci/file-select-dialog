@@ -21,6 +21,13 @@ module.exports = {
         content: baseUrl
       }
     ],
+    [
+      'meta',
+      {
+        name: 'og:type',
+        content: 'website'
+      }
+    ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@miyauchi_tomoki' }],
     ['link', { rel: 'icon', content: `${baseUrl}favicon.ico` }]
