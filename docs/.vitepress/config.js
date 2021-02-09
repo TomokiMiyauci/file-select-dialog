@@ -4,12 +4,11 @@
 
 const title = 'File Select Dialog'
 const description = 'Directly call file select dialog from JavaScript'
-const baseUrl = 'https://tomokimiyauci.github.io/file-select-dialog/'
+const baseUrl = 'https://file-select-dialog.vercel.app/'
 module.exports = {
   lang: 'en-US',
   title,
   description,
-  base: '/file-select-dialog/',
   head: [
     ['meta', { name: 'og:title', content: title }],
     ['meta', { name: 'og:description', content: description }],
