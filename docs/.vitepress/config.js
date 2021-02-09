@@ -12,7 +12,7 @@ module.exports = {
   head: [
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
-    ['meta', { property: 'og:image', content: `${baseUrl}/logo.png` }],
+    ['meta', { property: 'og:image', content: `${baseUrl}/cover.png` }],
     [
       'meta',
       {
