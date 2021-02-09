@@ -8,11 +8,17 @@ module.exports = {
   lang: 'en-US',
   title,
   description,
-  base: '/file-select-dialog/',
   head: [
     ['meta', { name: 'og:title', content: title }],
     ['meta', { name: 'og:description', content: description }],
     ['meta', { name: 'og:image', content: '/logo.png' }],
+    [
+      'meta',
+      {
+        name: 'og:url',
+        content: 'https://tomokimiyauci.github.io/file-select-dialog/'
+      }
+    ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:site', content: '@miyauchi_tomoki' }]
   ],
