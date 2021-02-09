@@ -22,7 +22,8 @@ module.exports = {
       }
     ],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:site', content: '@miyauchi_tomoki' }]
+    ['meta', { name: 'twitter:site', content: '@miyauchi_tomoki' }],
+    ['link', { rel: 'icon', content: `${baseUrl}favicon.ico` }]
   ],
 
   themeConfig: {
