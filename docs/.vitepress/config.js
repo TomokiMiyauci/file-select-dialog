@@ -36,6 +36,7 @@ module.exports = {
     repo: 'TomokiMiyauci/file-select-dialog',
     logo: '/logo.png',
     docsDir: 'docs',
+    docsBranch: 'main',
 
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
