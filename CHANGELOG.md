@@ -1,3 +1,12 @@
+## [1.5.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.5.0...v1.5.1) (2021-02-10)
+
+
+### Bug Fixes
+
+* **docs:** change base path ([d20183b](https://github.com/TomokiMiyauci/file-select-dialog/commit/d20183b626ad9bbc6443d44c812b2e331e78d265))
+* **docs:** change path ([dffcb23](https://github.com/TomokiMiyauci/file-select-dialog/commit/dffcb23739d95c3ca718f50830b4fecc2f751998))
+* **docs:** fix typo ([df19064](https://github.com/TomokiMiyauci/file-select-dialog/commit/df19064832a653a15d692a54399f757f2cf44b64))
+
 # [1.5.0](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.4.1...v1.5.0) (2020-11-29)
 
 
