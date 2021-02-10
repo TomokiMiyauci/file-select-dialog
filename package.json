@@ -1,6 +1,6 @@
 {
   "name": "file-select-dialog",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Call file select dialog programmatically",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",

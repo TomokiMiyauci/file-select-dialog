@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.5.1...v1.5.2) (2021-02-10)
+
+
+### Bug Fixes
+
+* change docs path ([ae1c0db](https://github.com/TomokiMiyauci/file-select-dialog/commit/ae1c0db4a053d230f0be140d7748dfe0bcb21b3d))
+
 ## [1.5.1](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.5.0...v1.5.1) (2021-02-10)
 
 
