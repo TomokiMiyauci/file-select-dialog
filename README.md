@@ -26,7 +26,7 @@
 - Modern browser support only
 - Supports selecting multiple files and the file type accepts
 
-[Read the Docs to Learn More.](https://tomokimiyauci.github.io/file-select-dialog/)
+[Read the Docs to Learn More.](https://file-select-dialog.vercel.app/)
 
 ## :bulb: LICENSE
 
