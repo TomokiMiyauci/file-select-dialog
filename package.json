@@ -96,10 +96,6 @@
               "release": "patch"
             },
             {
-              "type": "docs",
-              "release": "patch"
-            },
-            {
               "type": "feat",
               "release": "minor"
             },
