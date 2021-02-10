@@ -13,7 +13,7 @@
 
 # file-select-dialog
 
-> Directly call file select dialog to JavaScript.
+> Directly call file select dialog from JavaScript.
 > Get Back Promise File or FileList object.
 > No more hacky hiding of `<input type="file">` elements.
 
