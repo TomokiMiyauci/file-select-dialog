@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.5.3...v1.5.4) (2021-02-10)
+
+
+### Bug Fixes
+
+* fix typo ([2fad428](https://github.com/TomokiMiyauci/file-select-dialog/commit/2fad42886dfc37015507f4989c5c64cf186a72fc))
+
 ## [1.5.3](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.5.2...v1.5.3) (2021-02-10)
 
 ## [1.5.2](https://github.com/TomokiMiyauci/file-select-dialog/compare/v1.5.1...v1.5.2) (2021-02-10)
