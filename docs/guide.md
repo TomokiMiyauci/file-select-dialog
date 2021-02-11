@@ -4,6 +4,10 @@ Directly call file select dialog from JavaScript.
 Get Back Promise File or FileList object.
 No more hacky hiding of `<input type="file">` elements.
 
+## DEMO
+
+<playground />
+
 ## Release Notes
 
 Latest version: ![npm](https://img.shields.io/npm/v/file-select-dialog)

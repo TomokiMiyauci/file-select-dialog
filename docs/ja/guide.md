@@ -4,6 +4,10 @@ JavaScript からファイル選択ダイアログを直接呼び出します。
 Promise で`File`または`FileList`オブジェクトを取得します。
 `<inputtype =" file ">`ハックはもう必要ありません。
 
+## デモ
+
+<playground />
+
 ## リリースノート
 
 最新バージョン: ![npm](https://img.shields.io/npm/v/file-select-dialog)
