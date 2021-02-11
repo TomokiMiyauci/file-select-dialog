@@ -1,0 +1,1 @@
+import{o as s,c as a,a as n}from"./app.f0c1afc4.js";const t='{"title":"API","description":"","frontmatter":{},"headers":[{"level":2,"title":"パラメータ","slug":"パラメータ"},{"level":2,"title":"型定義","slug":"型定義"}],"relativePath":"ja/api.md","lastUpdated":1613008155107}',e={},o=n('',6);e.render=function(n,t,e,p,c,l){return s(),a("div",null,[o])};export default e;export{t as __pageData};
