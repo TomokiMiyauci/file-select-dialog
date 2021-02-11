@@ -1,0 +1,2 @@
+User-Agent:*
+Sitemap:https://file-select-dialog.vercel.app

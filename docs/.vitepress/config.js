@@ -27,7 +27,7 @@ const baseHead = [
   ],
   ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ['meta', { name: 'twitter:site', content: '@miyauchi_tomoki' }],
-  ['link', { rel: 'icon', content: `${baseUrl}/favicon.ico` }]
+  ['link', { rel: 'alternate', href: baseUrl, hreflang: 'x-default' }]
 ]
 module.exports = {
   title,
