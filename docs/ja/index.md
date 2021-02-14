@@ -2,7 +2,7 @@
 home: true
 heroImage: /cover.png
 actionText: はじめる
-actionLink: /ja/guide
+actionLink: /ja/guide/
 
 features:
   - title: 💡 Promiseベース

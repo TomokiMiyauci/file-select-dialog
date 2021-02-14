@@ -2,7 +2,7 @@
 home: true
 heroImage: /cover.png
 actionText: Get Started
-actionLink: /guide
+actionLink: /guide/
 
 features:
   - title: 💡 Promisable

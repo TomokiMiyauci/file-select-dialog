@@ -58,10 +58,10 @@ module.exports = {
         label: 'English',
         selectText: 'Languages',
         nav: [
-          { text: 'Guide', link: '/guide', activeMatch: '^/guide' },
+          { text: 'Guide', link: '/guide/', activeMatch: '^/guide' },
           {
             text: 'API',
-            link: '/api',
+            link: '/api/',
             activeMatch: '^/api'
           },
           {
@@ -74,7 +74,7 @@ module.exports = {
         lastUpdated: 'Last Updated',
         sidebar: {
           '/api': getConfigSidebar(),
-          '/guide': getGuideSidebar()
+          '/guide/': getGuideSidebar()
         }
       },
 
@@ -82,10 +82,10 @@ module.exports = {
         label: '日本語',
         selectText: '言語',
         nav: [
-          { text: 'ガイド', link: '/ja/guide', activeMatch: '^/ja/guide' },
+          { text: 'ガイド', link: '/ja/guide/', activeMatch: '^/ja/guide' },
           {
             text: 'API ',
-            link: '/ja/api',
+            link: '/ja/api/',
             activeMatch: '^/ja/api'
           },
           {
@@ -98,16 +98,16 @@ module.exports = {
         lastUpdated: '最終更新',
 
         sidebar: {
-          '/ja/api': [
+          '/ja/api/': [
             {
-              text: 'API Reference',
-              link: '/ja/api'
+              text: 'API リファレンス',
+              link: '/ja/api/'
             }
           ],
-          '/ja/guide': [
+          '/ja/guide/': [
             {
-              text: 'Introduction',
-              link: '/ja/guide'
+              text: 'はじめに',
+              link: '/ja/guide/'
             }
           ]
         }
@@ -126,7 +126,7 @@ function getGuideSidebar() {
   return [
     {
       text: 'Introduction',
-      link: '/guide'
+      link: '/guide/'
     }
   ]
 }
@@ -135,7 +135,7 @@ function getConfigSidebar() {
   return [
     {
       text: 'API Reference',
-      link: '/api'
+      link: '/api/'
     }
   ]
 }
