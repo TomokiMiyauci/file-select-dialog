@@ -6,65 +6,65 @@
     <xhtml:link
                rel="alternate"
                hreflang="ja"
-               href="https://file-select-dialog.vercel.app/ja/index.html"/>
+               href="https://file-select-dialog.vercel.app/ja/"/>
     <xhtml:link
                rel="alternate"
                hreflang="en"
                href="https://file-select-dialog.vercel.app"/>
   </url>
   <url>
-    <loc>https://file-select-dialog.vercel.app/ja/index.html</loc>
+    <loc>https://file-select-dialog.vercel.app/ja/</loc>
     <xhtml:link
                rel="alternate"
                hreflang="ja"
-               href="https://file-select-dialog.vercel.app/ja/index.html"/>
+               href="https://file-select-dialog.vercel.app/ja/"/>
     <xhtml:link
                rel="alternate"
                hreflang="en"
                href="https://file-select-dialog.vercel.app"/>
   </url>
   <url>
-    <loc>https://file-select-dialog.vercel.app/guide.html</loc>
+    <loc>https://file-select-dialog.vercel.app/guide/</loc>
     <xhtml:link
                rel="alternate"
                hreflang="ja"
-               href="https://file-select-dialog.vercel.app/ja/guide.html"/>
+               href="https://file-select-dialog.vercel.app/ja/guide/"/>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://file-select-dialog.vercel.app/guide.html"/>
+               href="https://file-select-dialog.vercel.app/guide/"/>
   </url>
   <url>
-    <loc>https://file-select-dialog.vercel.app/ja/guide.html</loc>
+    <loc>https://file-select-dialog.vercel.app/ja/guide/</loc>
     <xhtml:link
                rel="alternate"
                hreflang="ja"
-               href="https://file-select-dialog.vercel.app/ja/guide.html"/>
+               href="https://file-select-dialog.vercel.app/ja/guide/"/>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://file-select-dialog.vercel.app/guide.html"/>
+               href="https://file-select-dialog.vercel.app/guide/"/>
   </url>
   <url>
-    <loc>https://file-select-dialog.vercel.app/api.html</loc>
+    <loc>https://file-select-dialog.vercel.app/api/</loc>
     <xhtml:link
                rel="alternate"
                hreflang="ja"
-               href="https://file-select-dialog.vercel.app/ja/api.html"/>
+               href="https://file-select-dialog.vercel.app/ja/api/"/>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://file-select-dialog.vercel.app/api.html"/>
+               href="https://file-select-dialog.vercel.app/api/"/>
   </url>
   <url>
-    <loc>https://file-select-dialog.vercel.app/ja/api.html</loc>
+    <loc>https://file-select-dialog.vercel.app/ja/api/</loc>
     <xhtml:link
                rel="alternate"
                hreflang="ja"
-               href="https://file-select-dialog.vercel.app/ja/api.html"/>
+               href="https://file-select-dialog.vercel.app/ja/api/"/>
     <xhtml:link
                rel="alternate"
                hreflang="en"
-               href="https://file-select-dialog.vercel.app/api.html"/>
+               href="https://file-select-dialog.vercel.app/api/"/>
   </url>
 </urlset>
