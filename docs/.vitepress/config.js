@@ -113,6 +113,10 @@ module.exports = {
         }
       }
     },
+    algolia: {
+      apiKey: 'bbd73c11179bb9e5b0f0546d969eaa7b',
+      indexName: 'file-select-dialog'
+    },
     repo: 'TomokiMiyauci/file-select-dialog',
     logo: '/logo.png',
     docsDir: 'docs',
